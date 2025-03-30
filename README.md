@@ -11,4 +11,3 @@ This workshop demonstrates how to deploy and manage applications on Azure Red Ha
 5. [ARO でのアプリのスケーリング](05-scaling-apps/README.md)
 6. [アプリに Azure のストレージをアタッチ](06-attach-storage-to-app/README.md)
 7. [ARO に AI アプリをデプロイ](07-deploy-ai-app/README.md)
-# App-on-ARO-Workshop
