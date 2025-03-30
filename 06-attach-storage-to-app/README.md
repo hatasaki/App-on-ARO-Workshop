@@ -4,7 +4,7 @@
 
 ## Hello World アプリに Azure FIles をアタッチ
 
-コンソールのトポロジー画面で Hello world アプリを選択し、右上の「アクション」プルダウンメニューから「ストレージの追加」をクリックすることで、アプリ Pod にストレージを追加することができます。下図のように「ストレージの追加」画面が表示されますので、PersistentVolumeClaim（ストレージ要求）の`新規要求の作成`を選択し、StorageClass に`azurefile-csi`、PersistentVolumeClaim名に名称、サイズに 5 GiB、マウントパスに`/mount`を入力し、「保存」をクリックしてください。この操作により、Azure 上で自動的に Azure Disk が作成されて、Pod が再起動してストレージがアタッチされた Pod が起動します
+コンソールのトポロジー画面で Hello world アプリを選択し、右上の「アクション」プルダウンメニューから「ストレージの追加」をクリックすることで、アプリ Pod にストレージを追加することができます。下図のように「ストレージの追加」画面が表示されますので、PersistentVolumeClaim（ストレージ要求）の`新規要求の作成`を選択し、StorageClass に`azurefile-csi`、PersistentVolumeClaim名に名称、アクセスモードは`RWX`、サイズに 5 GiB、マウントパスに`/mount`を入力し、「保存」をクリックしてください。この操作により、Azure 上で自動的に Azure Disk が作成されて、Pod が再起動してストレージがアタッチされた Pod が起動します
 
 ![pv attach](images/pv_attach.png)
 
