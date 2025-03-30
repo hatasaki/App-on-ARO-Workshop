@@ -1,6 +1,6 @@
 # :rocket: 01 - ワークショップのための環境をセットアップ
 
-ワークショップに利用する Azure Red Hat OpenShift (ARO) 環境に接続します。ARO では、開発者が利用する操作の多くは OpenShit のコンソールから実施することができます
+ワークショップに利用する Azure Red Hat OpenShift (ARO) 環境に接続します。ARO では、開発者が利用する操作の多くは OpenShift のコンソールから実施することができます
 
 ## ARO コンソールの URL に接続
 
