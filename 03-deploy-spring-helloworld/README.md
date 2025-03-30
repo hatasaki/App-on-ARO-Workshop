@@ -1,6 +1,6 @@
 # :rocket: 03 - Hello World Spring Boot アプリを ARO にデプロイ
 
-このセクションでは、Sping Boot の Hello World アプリを ARO にデプロイします。ソースコードを簡単に ARO にデプロイする方法はいくつかありますが、ここでは GitHub のレポジトリからインポートしてアプリをデプロイする方法を利用します
+このセクションでは、Spring Boot の Hello World アプリを ARO にデプロイします。ソースコードを簡単に ARO にデプロイする方法はいくつかありますが、ここでは GitHub のレポジトリからインポートしてアプリをデプロイする方法を利用します
 > このワークショップでは、参加者の GitHub レポジトリは利用せず、あらかじめ用意した Hello World アプリのレポジトリを利用します。以下に Hello World アプリの作成方法について説明します。もしご自身のレポジトリを利用したい場合はチャレンジしてみてください
 
 ## Spring Boot の `hello world` アプリの作成
@@ -9,7 +9,7 @@ Spring Boot アプリケーションを作成する一般的な方法は、Sprin
 
 ![Spring Initializr](images/spring_initializer.png)
 
-コンソールのターミナルなどでコマンドラインを用いる場合、curl コマンドを利用して新しいSpring Bootプロジェクトを作成できます
+コンソールのターミナルなどでコマンドラインを用いる場合、curl コマンドを利用して新しい Spring Boot プロジェクトを作成できます
 
 ```bash
 mkdir helloworld
