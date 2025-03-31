@@ -74,6 +74,38 @@ ARO では内部用のコンテナーレジストリーを搭載しています�
 
 ![app ui](images/spring_app_ui.png)
 
+<details markdown="block">
+<summary> (オプション) ローカルのソースコードをコマンドでデプロイ</summary>
+
+ローカルやターミナルに保存したソースコードから OC コマンドを利用して ARO にデプロイします。まずソースコードのルートフォルダに移動して、下記のコマンドを実行し、新しい Build を作成します。アプリ名には適切な名前を入力してください
+
+```bash
+oc new-build --binary --name=<アプリ名> --image-stream=java:openjdk-17-ubi8
+```
+
+次に下記のコマンドでローカルのソースコードを用いてアプリとコンテナーイメージのビルドを実行します
+
+```bash
+oc start-build <アプリ名> --from-dir=. --follow
+```
+
+ビルドが完了したら、作成されたコンテナーイメージ用いてアプリをデプロイします
+
+```bash
+oc new-app <アプリ名>
+```
+
+最後にアプリの Route を作成してアプリを公開します
+
+```bash
+oc create route edge <アプリ名> --service <アプリ名>
+```
+
+コンソールのトポロジー画面に移動して、作成したアプリを探して選択します。Routes に記載の URL に接続してみてください (`/hello`のパス追加を忘れずに)
+
+
+</details>
+
 ---
 
 ➡️
