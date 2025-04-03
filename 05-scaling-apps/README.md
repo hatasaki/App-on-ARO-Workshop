@@ -50,6 +50,32 @@ Cluster Autoscaler を構成すると、アプリの起動に必要なリソー�
 
 ![clusterautoscaler](images/clusterautoscaler.png)
 
+
+ClusterAutoscaler 定義の例
+
+``` yaml
+apiVersion: autoscaling.openshift.io/v1
+kind: ClusterAutoscaler
+metadata:
+  name: default
+spec:
+  podPriorityThreshold: -10
+  resourceLimits:
+    cores:
+      max: 72
+      min: 4
+    maxNodesTotal: 9
+    memory:
+      max: 144
+      min: 8
+  scaleDown:
+    delayAfterAdd: 3m
+    delayAfterDelete: 3m
+    delayAfterFailure: 30s
+    enabled: true
+    unneededTime: 60s
+```
+
 #### MachineAutoscaler の定義
 
 ノードの種類（スペックや配置する可用性ゾーンなど）毎のスケーリング定義です。サイドバーの MachineSets から作成することができます
